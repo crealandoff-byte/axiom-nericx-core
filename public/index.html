@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10131c">
+  <title>AXIOM NÉRICX — Core Interface</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand-mark">AX</div>
+      <div>
+        <p class="eyebrow">AXIOM PONT 3D</p>
+        <h1>NÉRICX <span>CORE</span></h1>
+      </div>
+      <div class="status"><i id="statusDot"></i><span id="statusText">Vérification du backend…</span></div>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">PLATEFORME MODULAIRE · V0.1</p>
+      <h2>Un noyau.<br><em>Plusieurs mondes.</em></h2>
+      <p class="intro">Une première interface connectable aux futurs modules de raisonnement, de création et de développement de jeux.</p>
+    </section>
+
+    <section class="workspace">
+      <aside class="rail">
+        <p class="eyebrow">MODULES</p>
+        <button class="module active" data-module="core"><span>◈</span> Core Chat <small id="etatCore">…</small></button>
+        <div class="module disabled" id="modImage"><span>▧</span> Image Studio <small>À CONNECTER</small></div>
+        <div class="module disabled" id="modAudio"><span>♫</span> Audio Lab <small>À CONNECTER</small></div>
+        <div class="module disabled" id="modVideo"><span>▶</span> Video Lab <small>À CONNECTER</small></div>
+        <div class="module disabled"><span>⬡</span> Game Lab <small>PROTOTYPE FUTUR</small></div>
+        <div class="rail-note"><strong>Principe AXIOM</strong><p>Les capacités doivent être vérifiables, remplaçables et séparées du noyau.</p></div>
+      </aside>
+
+      <section class="chat-panel">
+        <div class="panel-head">
+          <div><p class="eyebrow">ESPACE DE TRAVAIL</p><h3>Conversation avec Néricx</h3></div>
+          <span class="pill" id="pillSubstrat">API BACKEND</span>
+        </div>
+        <div id="messages" class="messages" aria-live="polite">
+          <article class="message assistant"><div class="avatar">AX</div><div><b>Néricx</b><p>Le noyau d'interface est prêt. Connecte la clé API côté serveur dans Netlify pour activer les réponses du modèle. Les modules créatifs et le Game Lab restent à développer.</p></div></article>
+        </div>
+        <form id="chatForm" class="composer">
+          <label class="sr-only" for="messageInput">Message</label>
+          <textarea id="messageInput" rows="2" maxlength="12000" placeholder="Décris une idée, une tâche ou un module à construire…" required></textarea>
+          <div class="composer-bottom"><span>Ne partage aucune clé secrète dans le chat.</span><button id="sendButton" type="submit">Envoyer <b>↗</b></button></div>
+        </form>
+      </section>
+    </section>
+
+    <section class="diagnostic" id="diagnostic" hidden>
+      <p class="eyebrow">TRACE DE DÉCISION</p>
+      <pre id="traceContenu"></pre>
+    </section>
+
+    <footer><span>AXIOM NÉRICX · STARTER V0.1</span><span>Faits · Modèles · Hypothèses</span></footer>
+  </main>
+  <script src="/app.js" defer></script>
+</body>
+</html>

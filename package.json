@@ -1,0 +1,14 @@
+{
+  "name": "axiom-nericx-platform-starter",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Noyau AXIOM Néricx : orchestration centrale indépendante du substrat d'inférence.",
+  "scripts": {
+    "dev": "netlify dev",
+    "test": "node tests/memoire.test.mjs && node tests/noyau.test.mjs && node tests/registre.test.mjs"
+  },
+  "devDependencies": {
+    "netlify-cli": "^23.0.0"
+  }
+}
